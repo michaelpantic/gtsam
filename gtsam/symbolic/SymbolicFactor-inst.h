@@ -49,7 +49,7 @@ namespace gtsam
       // Check keys
       for(Key key: keys) {
         if(allKeys.find(key) == allKeys.end())
-          throw std::runtime_error("Requested to eliminate a key that is not in the factors");
+          throw std::runtime_error("Requested to eliminate a key that is not in the factors" + std::to_string(key));
       }
 
       // Sort frontal keys
